@@ -285,17 +285,6 @@ body {
     margin-top: 20px;
 }
 
-/* 搜索输入框优化 */
-#search-input {
-    width: 65%;
-    padding: 12px 20px;
-    font-size: 18px;
-    border: 2px solid #c81b1b;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.9);
-    transition: all 0.3s ease;
-}
-
 /* 搜索按钮优化 */
 #search-button {
     padding: 12px 25px;
