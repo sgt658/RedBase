@@ -8,26 +8,26 @@
 
 /* 设置 body 背景 */
 body {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background-size: cover; /* 背景图片覆盖整个容器 */
+    background-repeat: no-repeat; /* 不重复背景 */
+    background-attachment: fixed; /* 背景固定 */
+    background-position: center; /* 背景居中 */
 }
 
 /* 首页容器设置 */
 .home {
     height: 100%;
-    overflow: hidden;
+    overflow: hidden; /* 防止内容溢出 */
 }
 
 /* 内容容器，设置透视效果 */
 .content {
-    perspective: 340px;
+    perspective: 340px; /* 透视效果深度 */
     width: 100%;
     position: relative;
 }
 
-/* 星星效果 */
+/* 星星效果，使用 box-shadow 来创建多个小星星 */
 .stars {
     position: absolute;
     top: 50%;
@@ -47,11 +47,11 @@ body {
                 -453px 308px #d6d9d9, -111px 1px #d9d9d9, 573px -450px #ededed, 198px 300px #d6d9d9, 
                 -355px 166px #dedede, -715px 13px #e3e3e9, 262px -104px #d1d9d9, 147px 325px #dbdbdb, 
                 1px 399px #dbdbdb, 286px -100px white, 43px -329px #e8e8e8;
-    animation: fly 15s linear infinite;
-    transform-style: preserve-3d;
+    animation: fly 15s linear infinite; /* 星星动画效果 */
+    transform-style: preserve-3d; /* 保持3D效果 */
 }
 
-/* 星星动画 */
+/* 星星的飞行动画 */
 @keyframes fly {
     from {
         transform: translateZ(0px);
@@ -70,7 +70,7 @@ body {
     color: #000;
     margin: 20px auto;
     position: relative;
-    font-family: 'Pacifico', cursive, sans-serif;
+    font-family: 'Pacifico', cursive, sans-serif; /* 使用手写风格字体 */
 }
 
 /* 图片叠加效果 */
@@ -87,7 +87,7 @@ body {
 
 /* 小图样式 */
 .small-photo {
-    width: 320px;
+    width: 320px; /* 增大宽度 */
     height: auto;
     border: 2px solid #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
@@ -95,11 +95,11 @@ body {
     position: relative;
 }
 
-/* 图片背景 */
+/* 图片背景设置 */
 .bgc {
     border-radius: 10px;
     clip-path: inset(0 0 0% 0);
-    object-fit: cover;
+    object-fit: cover; /* 保证图片充满容器 */
 }
 
 /* 子查询区样式 */
@@ -110,7 +110,7 @@ body {
     align-items: center;
     margin: 20px auto;
     width: 80%;
-    font-family: 'Brush Script MT', cursive, sans-serif;
+    font-family: 'Brush Script MT', cursive, sans-serif; /* 使用不同手写风格字体 */
     position: relative;
     z-index: 3;
 }
@@ -138,7 +138,7 @@ body {
     border-radius: 10px;
 }
 
-/* 底部渐变块 */
+/* 底部渐变效果区块 */
 .curve-block {
     width: 100%;
     height: 50px;
@@ -147,19 +147,19 @@ body {
     margin: 20px 0;
 }
 
-/* 高亮区域块 */
+/* 高亮区域，增加圆角效果 */
 .curve-block1 {
     width: 40%;
     height: 70px;
     background-color: rgb(234, 8, 16);
     border-radius: 15px;
-    margin: 20px auto;
+    margin: 20px auto; /* 居中 */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* 另一种底部渐变 */
+/* 另一种渐变底部区块 */
 .curve-block2 {
     width: 100%;
     height: 50px;
@@ -184,7 +184,7 @@ body {
     font-family: 'Dancing Script', cursive, sans-serif;
 }
 
-/* 图标 */
+/* 图标样式 */
 .icon {
     display: block;
     width: 50px;
@@ -205,7 +205,7 @@ body {
     line-height: 100px;
 }
 
-/* 外圈 */
+/* 链接外圈样式 */
 .lake-link::before {
     content: "";
     position: absolute;
@@ -217,7 +217,7 @@ body {
     border-radius: 50%;
 }
 
-/* 内圈 */
+/* 链接内圈样式 */
 .lake-link::after {
     content: "";
     position: absolute;
@@ -229,31 +229,156 @@ body {
     border-radius: 50%;
 }
 
-/* 页脚文本 */
+/* 页脚文本样式 */
 .footer-text {
-    font-size: 20px;
+    font-size: 20px; 
     color: rgba(38, 38, 41, 0.733);
     text-align: center;
     padding: 10px 0;
 }
 
-/* 文本容器 */
+/* 文本容器，垂直排列 */
 .text-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 auto; /* 居中 */
 }
 
-/* 补充文字 */
+/* 补充文本样式 */
 .additional-text {
     color: black;
     font-size: 25px;
     margin-top: 5px;
 }
 
-/* 探索文字 */
+/* 探索文字样式 */
 .explore-text {
     position: absolute;
-    top: 60
+    top: 60%;           /* 调整文字位置 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5); /* 背景色透明 */
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+/* 搜索框样式 */
+.search-bar {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    top: 8%; /* 根据需要调整 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* 搜索输入框样式 */
+#search-input {
+    width: 60%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 搜索按钮样式 */
+#search-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-left: 8px;
+    border: none;
+    background: #c81b1b;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 搜索按钮悬停效果 */
+#search-button:hover {
+    background: #a31a1a;
+}
+@media (max-width: 768px) {
+    .title {
+        font-size: 48px;
+        top: 60px;
+    }
+
+    .query {
+        font-size: 24px;
+    }
+
+    .small-photo {
+        width: 90%;
+    }
+
+    .overlay-photos {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sub-query,
+    .sub-query2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sub-query .img,
+    .sub-query2 .img {
+        width: 90%;
+        height: auto;
+    }
+
+    .lake-link {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+        line-height: 80px;
+    }
+
+    .lake-link::before,
+    .lake-link::after {
+        width: 100%;
+        height: 100%;
+    }
+
+    .curve-block1 {
+        width: 80%;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .explore-text {
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .search-bar {
+        width: 95%;
+    }
+
+    #search-input {
+        width: 70%;
+    }
+
+    #search-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .footer-text {
+        font-size: 16px;
+    }
+
+    .additional-text {
+        font-size: 18px;
+    }
+}
