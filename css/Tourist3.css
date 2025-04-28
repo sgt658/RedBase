@@ -32,34 +32,32 @@ body {
 
 /* 红色背景条 */
 .red-banner {
-width: 100%;
-height: 250px; /* 可根据需要修改高度 */
-background-color: #ba3838; /* 红色 */
-border-radius: 10% 10% 10% 10%; /* 圆角效果 */
-display: flex; /* 使用 flexbox 排列内部内容 */
-flex-direction: column; /* 设置为垂直排列子元素 */
-justify-content: center; /* 垂直方向上居中 */
-align-items: center; /* 水平方向上居中 */
-padding: 20px; /* 给red-banner添加一些内边距 */
+  width: 100%;
+  height: 250px; /* 可根据需要修改高度 */
+  background-color: #ba3838; /* 红色 */
+  border-radius: 10% 10% 10% 10%; /* 圆角效果 */
+  display: flex; /* 使用 flexbox 排列内部内容 */
+  flex-direction: column; /* 设置为垂直排列子元素 */
+  justify-content: center; /* 垂直方向上居中 */
+  align-items: center; /* 水平方向上居中 */
+  padding: 20px; /* 给red-banner添加一些内边距 */
 }
 
 /* 标题 */
 .title1 {
-font-size: 35px;
-color: #fff;               
-margin-bottom: 10px; /* 标题与白色条之间的间距 */
+  font-size: 35px;
+  color: #fff;               
+  margin-bottom: 10px; /* 标题与白色条之间的间距 */
 }
 
 /* 白色条 */
 .white {
-width: 45%; /* 白色块宽度 */
-padding: 15px 20px;
-background-color: #fff; /* 背景色为白色 */
-border-radius: 50px; /* 半圆形效果 */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  width: 45%; /* 白色块宽度 */
+  padding: 15px 20px;
+  background-color: #fff; /* 背景色为白色 */
+  border-radius: 50px; /* 半圆形效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
 }
-
-
 
 /* 主体区域容器 */
 .container {
@@ -110,42 +108,43 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
   font-weight: bold;
 } 
 
-  /* 右侧内容区域 */
-  .content {
-    flex: 1;
-    display: flex;
-    flex-direction: column; /* 纵向排列子元素 */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .content p {
-    text-indent: 2em;
-    text-align: justify;
-    width: 100%;           /* 占满 .content 的宽度 */
-    margin-bottom: 1em;    /* 每段间距 */
-    line-height: 1.8;
-  }
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 每行2列 */
-    gap: 20px; /* 图片间距 */
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .image-item img {
-    width: 100%;
-    height: 200px; /* 设置统一高度 */
-    object-fit: cover; /* 图片裁剪填充 */
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-  }  
-  
-  .image-item img:hover {
-    transform: scale(1.05);
-  }
+/* 右侧内容区域 */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* 纵向排列子元素 */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
 
-  
+.content p {
+  text-indent: 2em;
+  text-align: justify;
+  width: 100%;           /* 占满 .content 的宽度 */
+  margin-bottom: 1em;    /* 每段间距 */
+  line-height: 1.8;
+}
+
+/* 图片网格 */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 每行3列 */
+  gap: 20px; /* 图片间距 */
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.image-item img {
+  width: 100%;
+  height: 200px; /* 设置统一高度 */
+  object-fit: cover; /* 图片裁剪填充 */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* 默认阴影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加阴影变化的平滑过渡 */
+}
+
+.image-item img:hover {
+  transform: scale(2); /* 增大放大效果 */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3); /* 增强阴影效果 */
+}
