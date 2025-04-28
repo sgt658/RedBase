@@ -131,13 +131,20 @@ body {
 }
 
 /* 子查询图片 */
+/* 统一设置子查询图片大小 */
 .sub-query .img,
 .sub-query2 .img {
-    width: 350px;
-    height: 200px;
-    border-radius: 10px;
+    width: 300px; /* 设置统一的宽度 */
+    height: 200px; /* 设置统一的高度 */
+    object-fit: cover; /* 保证图片按比例填充，裁剪过大部分 */
+    border-radius: 10px; /* 保持圆角效果 */
 }
-
+/* 小图悬停效果 */
+.small-photo:hover {
+    transform: scale(1.2); /* 放大效果 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑过渡 */
+}
 /* 底部渐变效果区块 */
 .curve-block {
     width: 100%;
@@ -228,7 +235,12 @@ body {
     border: 2px dashed rgb(195, 22, 22);
     border-radius: 50%;
 }
-
+/* 详情按钮悬停效果 */
+.lake-link:hover {
+    transform: scale(1.2); /* 放大效果 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑过渡 */
+}
 /* 页脚文本样式 */
 .footer-text {
     font-size: 20px; 
